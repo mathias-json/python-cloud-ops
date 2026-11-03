@@ -1,6 +1,6 @@
 # python-cloud-ops
 
-*I created this repository to understand the meanings around Infrastructure-as-Code in cloud computing. I started this small project, alongside developing my python fluency, to see how the application of these concepts and cloud tools create the infrastructure. Shardwareome of the things I've come to learn that are key to building these environments so far are:*
+*I created this repository to understand the meanings around Infrastructure-as-Code in cloud computing. I started this small project, alongside developing my python fluency, to see how the application of these concepts and cloud tools create the infrastructure. Some of the things I've come to learn that are key to building these environments so far are:*
 
 
 - data structures, in how the cloud addresses and describes hardware
