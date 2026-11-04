@@ -21,5 +21,8 @@ Now that I have coded in the configuration for the server, as a security measure
 
 fundamental python use of: dictionaries
 
+### 'security_group.py'
+*I have now added firewall rules to the code for the security group — the code removes the less-secure HTTP port 80 and added a port for monitoring network communication flow, along with enabling SSH and HTTPS.*
 
+fundamental python use of: lists, within dictionaries
 
