@@ -26,3 +26,8 @@ fundamental python use of: dictionaries
 
 fundamental python use of: lists, within dictionaries
 
+### 'remediate_bucket'
+*The code I have added now implements 2 cloud storage folders that can be used to store and organize data — in this scenario, I have public assets and customer records. the issue here though is that customer records isin’t something that should be public facing so I have revoked access to customer records as this can result in a data leak in real environments.*
+
+fundamental python use of: lists of dictionaries
+
