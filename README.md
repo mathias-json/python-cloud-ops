@@ -19,7 +19,7 @@
 *I have given the server a name; an instance type which specifies the amount of resources in terms of compute, memory, storage, etc; a region for where the server will be based — the ‘is_encrypted’ is in reference to the server’s hard drive
 Now that I have coded in the configuration for the server, as a security measure, I need to encrypt the hard drive rather than leave it open — I add to the dictionary to change the value from false to true and this will encrypt the drive; I also added a a HTTPS port.*
 
-fundamental use of: dictionaries
+fundamental python use of: dictionaries
 
 
 
