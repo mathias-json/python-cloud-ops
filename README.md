@@ -31,3 +31,9 @@ fundamental python use of: lists, within dictionaries
 
 fundamental python use of: lists of dictionaries
 
+### 'iam_audit.py'
+*this section of the code adds myself as a user; the code checks that I, as an administrative IAM user, has multi-factor authentication is disabled; this would flag up as a security alert so include within the code to update the dictionary so that it enforces MFA.*
+
+fundamental python use of: Conditionals
+
+###
