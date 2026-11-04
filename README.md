@@ -36,4 +36,8 @@ fundamental python use of: lists of dictionaries
 
 fundamental python use of: Conditionals
 
-###
+### 'audit_s3_loop.py'
+*what this code does is inspects a list of s3 buckets where there buckets that are open buckets for public access and a singular one which isin’t. I create a for loop to scan each bucket in the list and identify which buckets are open and lock them down so that there is no public access to them — it works as a security remediation script.*
+
+fundamental python use of: for loops
+
