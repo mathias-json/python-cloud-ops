@@ -41,3 +41,9 @@ fundamental python use of: Conditionals
 
 fundamental python use of: for loops
 
+### 'audit_ec2_loop.py'
+*this piece of code I have added scans the multiple servers and identifies any production instance that have open SSH ports — the code then closes the ports automatically and prints the updated state. — this is significant to GRC as running this loop across multiple servers instantly reduces attack surfaces and produce logs to verify compliance.*
+
+fundamental python use of: Logical Operators
+
+
