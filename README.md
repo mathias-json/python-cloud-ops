@@ -5,6 +5,8 @@
 
 - data structures, in how the cloud addresses and describes hardware
 - control flow, for how engineers are able to audit and fix this hardware automatically
+- Functions, for how engineers package logic into reusable tools
+- JSON imports, in how scripts can read external blueprints for configuring the cloud
 
 
 *These are all important elements which contribute to the provisioning of the cloud's infrastructure.*
