@@ -49,7 +49,7 @@ fundamental python use of: For Loops
 fundamental python use of: Logical Operators
 
 ### 'parse_and_audit_ec2.py'
-*In creating my python scripts, I have come to learn that the lists and dictionaries i have been creating, would replicate the data i receive from real outside sources, i.e. via AWS API responses or a configuration file from Terraform; this data would also be a string of text. The concept of taking this data as text and reconstructing it into live python objects called Deserialization ( json.loads ).*
+*In creating my python scripts, I have come to learn that the lists and dictionaries I have been creating, would replicate the data I receive from real outside sources, i.e. via AWS API responses or a configuration file from Terraform; this data would also be a string of text. The concept of taking this data as text and reconstructing it into live python objects called Deserialization ( json.loads ).*
 
 fundamental python use of: importing modules/python files
 
