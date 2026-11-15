@@ -53,6 +53,7 @@ if iam_user['mfa_enabled'] == False:
 print(iam_user)
 
 # create a list of s3 storage buckets
+
 s3_buckets = [
     {'bucket_name': 'prod-data', 'public_access': True},
     {'bucket_name': 'app-logs', 'public_access': False},
@@ -60,6 +61,7 @@ s3_buckets = [
 ]
 
 # create a loop to scan each bucket
+
 for bucket in s3_buckets:
     if bucket['public_access'] == True:
         # block all public access to any bucket that have access enabled
@@ -77,6 +79,7 @@ ec2_instances = [
 ]
 
 # create a for loop which checks any servers in the production environment that has an open ssh ports
+
 for instance in ec2_instances:
     if instance['env'] == 'prod' and instance['ssh_open'] == True:
         # close these ssh ports
