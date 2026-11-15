@@ -1,0 +1,99 @@
+# create cloud infrastructure
+# raw JSON string download from AWS, then unpacked into a python list of dictionaries
+
+import json
+raw_json_input = '[{"instance_name": "api-prod", "env": "prod", "ssh_open": true}]'
+
+parsed_fleet = json.loads(raw_json_input)
+
+# gather and configure hardware to create the instance
+
+web_server = {
+    'name': 'nimbus',
+    'instance_type': 't2.micro',
+    'region': 'eu-west-2',
+    'is_encrypted': False
+}
+
+# secure the hard drive
+# add https
+
+web_server['is_encrypted'] = True
+web_server['port'] = 443
+
+print(web_server)
+
+# create security group
+
+security_group = {
+    'group_name': 'web_firewall',
+    'open_ports': [22, 80, 443]
+}
+
+# remove security risk, add monitoring tool
+
+security_group['open_ports'].remove(80)
+security_group['open_ports'].append(8443)
+
+print(security_group)
+
+# add a user
+
+iam_user = {
+    'username': 'admin-mathias',
+    'mfa_enabled': False
+}
+
+# check if multi factor authentication is enabled
+
+if iam_user['mfa_enabled'] == False:
+    print('Security Alert: MFA is disabled! Enforcing MFA now...')
+    iam_user['mfa_enabled'] = True
+
+print(iam_user)
+
+# create a list of s3 storage buckets
+s3_buckets = [
+    {'bucket_name': 'prod-data', 'public_access': True},
+    {'bucket_name': 'app-logs', 'public_access': False},
+    {'bucket_name': 'user-uploads', 'public_access': True}
+]
+
+# create a loop to scan each bucket
+for bucket in s3_buckets:
+    if bucket['public_access'] == True:
+        # block all public access to any bucket that have access enabled
+        bucket['public_access'] = False
+        print(bucket['bucket_name'])
+
+print(s3_buckets)
+
+# create a list of servers
+
+ec2_instances = [
+    {'instance_name': 'web-prod', 'env': 'prod', 'ssh_open': True},
+    {'instance_name': 'sandbox-dev', 'env': 'dev', 'ssh_open': True},
+    {'instance_name': 'db-prod', 'env': 'prod', 'ssh_open': False}
+]
+
+# create a for loop which checks any servers in the production environment that has an open ssh ports
+for instance in ec2_instances:
+    if instance['env'] == 'prod' and instance['ssh_open'] == True:
+        # close these ssh ports
+        instance['ssh_open'] = False
+        print(instance['instance_name'])
+
+print(ec2_instances)
+
+def audit_ec2_fleet(fleet_list):
+    for instance in fleet_list:
+        if instance['env'] == 'prod' and instance['ssh_open'] == True:
+            instance['ssh_open'] = False
+            print(instance['instance_name'])
+    return fleet_list
+
+# feed the unpacked JSON list into your function and print the result 
+
+secured_fleet = audit_ec2_fleet(parsed_fleet)
+print(secured_fleet)
+
