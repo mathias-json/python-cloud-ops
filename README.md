@@ -53,5 +53,11 @@ fundamental python use of: Logical Operators
 
 fundamental python use of: importing modules/python files
 
+### 'parse_policy.py'
+*this piece of code I have written stores the configuration settings for cloud services into a dictionary. I then use dictionary packing to feed these settings directly into a function as arguments; they are parsed into data structures and passed into the audit functions.*
+
+fundamental python use of: dictionary unpacking
+
+
 
 
